@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pemesanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Pemesanan</h2>
+    <form>
+        <div class="form-group">
+            <label for="id_pemesan">ID Pemesan:</label>
+            <input type="text" id="id_pemesan" value="1" disabled>
+        </div>
+        <div class="form-group">
+            <label for="nama_pemesan">Nama Pemesan:</label>
+            <input type="text" id="nama_pemesan" required>
+        </div>
+        <div class="form-group">
+            <label for="nomor_identitas">Nomor Identitas:</label>
+            <input type="text" id="nomor_identitas" required>
+        </div>
+        <div class="form-group">
+            <label for="tipe_kamar">Tipe Kamar:</label>
+            <select id="tipe_kamar" required>
+                <option value="">-Pilih-</option>
+                <option value="standar">STANDAR</option>
+                <option value="deluxe">DELUXE</option>
+                <option value="family">FAMILY</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tanggal_pesan">Tanggal Pesan:</label>
+            <input type="date" id="tanggal_pesan" required>
+        </div>
+        <div class="form-group">
+            <label for="durasi_menginap">Durasi Menginap:</label>
+            <input type="number" id="durasi_menginap" required> Hari
+        </div>
+        <div class="form-group">
+            <label for="termasuk_breakfast">Termasuk Breakfast:</label>
+            <input type="checkbox" id="termasuk_breakfast"> Ya
+        </div>
+        <div class="form-group">
+            <label for="total_bayar">Total Bayar:</label>
+            <input type="text" id="total_bayar" disabled>
+        </div>
+        <button type="submit">Simpan</button>
+        <button type="reset">Batal</button>
+    </form>
+</body>
+</html>

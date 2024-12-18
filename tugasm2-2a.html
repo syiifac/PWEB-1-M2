@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Tambah Data Kamar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="file"], input[type="number"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Tambah Data Kamar</h2>
+        <form action="proses_tambah_kamar.php" method="post" enctype="multipart/form-data">
+            <label for="id_kamar">ID Kamar:</label>
+            <input type="text" id="id_kamar" name="id_kamar" required>
+
+            <label for="gambar">Gambar Ruangan:</label>
+            <input type="file" id="gambar" name="gambar" required>
+
+            <label for="jenis_kamar">Jenis Kamar:</label>
+            <input type="text" id="jenis_kamar" name="jenis_kamar" required>
+
+            <label for="harga">Harga:</label>
+            <input type="number" id="harga" name="harga" required>
+
+            <label for="fasilitas">Fasilitas:</label>
+            <textarea id="fasilitas" name="fasilitas" rows="4" cols="50"></textarea>
+
+            <input type="submit" value="Tambah Kamar">
+        </form>
+    </div>
+</body>
+</html>
